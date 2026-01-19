@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Live-Chat 
+    </title>
+    
+    <!-- SockJS Client -->
+ <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
+
+
+ <!-- STOMP over WebSocket client -->
+<script src="https://cdn.jsdelivr.net/npm/stompjs@2.3.3/lib/stomp.min.js"></script>
+ 
+<script src="/JS/main.js"></script>
+
+</head>
+<body>
+    <h2>welcome to live chat</h2>
+
+    <h2 id="username"></h2>
+    <div id="Login">
+        <input type="text" id="uname" placeholder="User Name">
+        <button onclick="connect()">connect</button>
+        </div> 
+        
+    <div style="display: none;" id="msgblock">
+        <input type="text" id="messageinput" placeholder="Type your message here...">
+        <button onclick="sendmessage()">Send</button>
+    </div>
+        
+    
+
+   <ul id="messageList"></ul>
+</body>
+</html>
