@@ -12,8 +12,7 @@ public class chatConfig implements WebSocketMessageBrokerConfigurer {
 
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry){
-        registry.addEndpoint("/ws-endpoints").withSockJS();  //endpoint is something that can be access by something
-        
+        registry.addEndpoint("/ws-endpoints").setAllowedOriginPatterns("*").withSockJS();  //endpoint is something that can be access by something
     }
 
     @Override 
