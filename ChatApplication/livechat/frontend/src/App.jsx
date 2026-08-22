@@ -19,8 +19,11 @@ function App() {
     setConnStatus('connecting');
     setConnLabel('Connecting...');
 
+    const backendUrl = import.meta.env.VITE_BACKEND_URL || '/ws-endpoints';
     const client = new Client({
-      webSocketFactory: () => new SockJS('/ws-endpoints'),// backend endpoint se connect hona
+      // made new changes
+      //  webSocketFactory: () => new SockJS('/ws-endpoints'),
+      webSocketFactory: () => new SockJS(backendUrl),// backend endpoint se connect hona
       reconnectDelay: 5000, // when connection get lost ,reconnect with in 5 sec
       heartbeatIncoming: 4000,
       heartbeatOutgoing: 4000,

@@ -17,7 +17,8 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: '../src/main/resources/static',
+    // outDir: '../src/main/resources/static',
+    outDir: process.env.VERCEL ? 'dist' : '../src/main/resources/static',
     emptyOutDir: true, // cleans the output directory before building
   },
 })

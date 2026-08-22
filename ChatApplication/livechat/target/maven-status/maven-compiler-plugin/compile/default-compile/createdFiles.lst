@@ -1,0 +1,6 @@
+com\chatwebapp\livechat\listener\WebSocketEventListener.class
+com\chatwebapp\livechat\LivechatApplication.class
+com\chatwebapp\livechat\controller\chatcontroller.class
+com\chatwebapp\livechat\model\ChatMessage.class
+com\chatwebapp\livechat\model\MessageType.class
+com\chatwebapp\livechat\config\chatConfig.class
